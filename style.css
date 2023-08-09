@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+}
+
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: var(--violet) url(images/bg-desktop.svg) no-repeat center;
+  color: white;
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 4rem;
+}
+
+nav {
+  margin-bottom: 1rem;
+}
+
+main {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-left: 4rem;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding: 1rem 3.5rem;
+  border-radius: 50px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+/* Social Media Icons */
+.sm_icon {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 50%;
+  border: 3px solid white;
+  color: white;
+}
+
+/* ✈️ Hover effects */
+button:hover {
+  cursor: pointer;
+  background-color: var(--softMagenta);
+  color: white;
+}
+
+.sm_icon:hover {
+  cursor: pointer;
+  color: var(--softMagenta);
+  border-color: var(--softMagenta);
+}
+
+/* 👣 Footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Attribute */
+.attribution {
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  bottom: 0;
+  z-index: 99;
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--softMagenta);
+}
+
+/* 📱 Media Query */
+@media only screen and (max-width: 1165px) {
+  body {
+    background: var(--violet) url(images/bg-mobile.svg) no-repeat top;
+    background-size: 100%;
+  }
+
+  .image {
+    max-width: 100%; /*adjust image to fix body width less than the screen width issue*/
+    height: auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .container,
+  nav {
+    align-self: start;
+  }
+
+  nav {
+    margin-bottom: 5rem;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    margin-bottom: 3rem;
+  }
+
+  section {
+    margin: 0 0 2rem 0;
+    text-align: center;
+  }
+
+  button {
+    padding: 1rem 4rem;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  .attribution {
+    padding-top: 2rem;
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+}
